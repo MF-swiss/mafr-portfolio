@@ -1,1 +1,136 @@
-# mafr-portfolio
+/* ------------------------------------
+   Grundlayout & Typografie
+------------------------------------ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #F7F7F7;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #0A3D62;
+}
+
+p, li {
+  font-size: 1.05rem;
+}
+
+/* ------------------------------------
+   Navigation
+------------------------------------ */
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #E5E5E5;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 15px 20px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.25s ease;
+}
+
+nav a:hover {
+  background-color: #E9F1FF;
+  color: #0A3D62;
+}
+
+/* ------------------------------------
+   Hero-Banner
+------------------------------------ */
+.hero {
+  background: linear-gradient(135deg, #0A3D62, #3C8DFF);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* ------------------------------------
+   Container & Karten
+------------------------------------ */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+/* ------------------------------------
+   Grid-Layout für Projekte
+------------------------------------ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------------
+   Buttons
+------------------------------------ */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #0A3D62;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  background-color: #3C8DFF;
+}
+
+/* ------------------------------------
+   Footer
+------------------------------------ */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 0.9rem;
+}
