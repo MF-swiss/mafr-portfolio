@@ -1,7 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Downloads</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <section>
-    <h2>Bewerbungsdossier</h2>
-    <a href="dossier.pdf" download>📄 Lebenslauf herunterladen</a>
-    <a href="dossier.pdf" download>📄 Zeugnisse & Zertifikate herunterladen</a>
-    <a href="dossier.pdf" download>📄 Zwischenzeugnis - Informatiker Applikationsentwicklung herunterladen</a>
-  </section>
+<nav>
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="ueber-mich.html">Über mich</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projekte.html">Projekte</a></li>
+    <li><a href="downloads.html">Downloads</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<h1>Downloads</h1>
+
+<ul>
+  <li><a href="lebenslauf.pdf" download>Lebenslauf (PDF)</a></li>
+  <li><a href="zeugnisse_zertifikate.pdf" download>Zeugnisse & Zertifikate (PDF)</a></li>
+  <li><a href="zwischenzeugnis.pdf" download>Zwischenzeugnis - Informatiker Applikationsentwicklung (PDF)</a></li>
+</ul>
+
+</body>
+</html>
