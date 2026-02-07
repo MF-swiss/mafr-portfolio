@@ -3,7 +3,7 @@
 ------------------------------------ */
 body {
   margin: 0;
-  padding: 0;
+  padding: 40px 20px; /* oben/unten 40px, links/rechts 20px */
   font-family: "Inter", Arial, sans-serif;
   background-color: #F7F7F7;
   color: #222;
