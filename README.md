@@ -1,136 +1,277 @@
-/* ------------------------------------
-   Grundlayout & Typografie
------------------------------------- */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", Arial, sans-serif;
-  background-color: #F7F7F7;
-  color: #222;
-  line-height: 1.6;
-}
+# 🔐 Portfolio Login System
 
-h1, h2, h3 {
-  font-weight: 600;
-  color: #0A3D62;
-}
+Willkommen! Dieses Portfolio ist durch ein Login-System geschützt. Nur autorisierte Benutzer mit gültigen Zugangsdaten können auf die Inhalte zugreifen.
 
-p, li {
-  font-size: 1.05rem;
-}
+## 🚀 Features
 
-/* ------------------------------------
-   Navigation
------------------------------------- */
-nav {
-  background-color: #ffffff;
-  border-bottom: 1px solid #E5E5E5;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+- ✅ **Sicheres Login**: Passwörter werden mit SHA-512 gehasht
+- ✅ **Session-Management**: Automatischer Logout nach 2 Stunden Inaktivität
+- ✅ **Mehrere Benutzer**: Unterstützt beliebig viele Benutzer-Accounts
+- ✅ **Responsive Design**: Funktioniert auf Desktop und Mobile
+- ✅ **Einfache Verwaltung**: Neue Benutzer können einfach hinzugefügt werden
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 15px 20px;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
+## 🎯 Zugang anfordern
 
-nav a {
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: 0.25s ease;
-}
+Falls du Zugriff auf dieses Portfolio benötigst, kontaktiere bitte den Portfolio-Inhaber für deine Zugangsdaten.
 
-nav a:hover {
-  background-color: #E9F1FF;
-  color: #0A3D62;
-}
+## 🔑 Standard-Benutzer
 
-/* ------------------------------------
-   Hero-Banner
------------------------------------- */
-.hero {
-  background: linear-gradient(135deg, #0A3D62, #3C8DFF);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
+Für Demo-Zwecke sind folgende Test-Accounts verfügbar:
+- **Benutzername:** admin | **Passwort:** demo123
+- **Benutzername:** student | **Passwort:** student
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
+*Hinweis: In der Produktion sollten diese Test-Accounts entfernt werden.*
 
-.hero p {
-  font-size: 1.3rem;
-  opacity: 0.9;
-}
+## 📁 Projektstruktur
 
-/* ------------------------------------
-   Container & Karten
------------------------------------- */
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-}
+```
+portfolio/
+├── index.html              # Login-Seite (Eingangsseite)
+├── home.html              # Haupt-Portfolio-Seite (geschützt)
+├── projekte.html          # Projekte (geschützt)
+├── skills.html            # Skills (geschützt)
+├── downloads.html         # Downloads (geschützt)
+├── kontakt.html           # Kontakt (geschützt)
+├── ueber-mich.html        # Über mich (geschützt)
+├── auth-protection.js     # Login-Schutz Script
+├── style.css              # Stylesheet
+└── README.md              # Diese Datei
+```
 
-/* ------------------------------------
-   Grid-Layout für Projekte
------------------------------------- */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
+## 🛠️ Installation & Setup (für Entwickler)
 
-.card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  transition: 0.25s ease;
-}
+### 1. Repository klonen
+```bash
+git clone https://github.com/dein-username/dein-repo.git
+cd dein-repo
+```
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
+### 2. Dateien strukturieren
+Stelle sicher, dass alle Dateien korrekt vorhanden sind (siehe Projektstruktur oben).
 
-/* ------------------------------------
-   Buttons
------------------------------------- */
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #0A3D62;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.25s ease;
-}
+### 3. Neue Benutzer hinzufügen
 
-.btn:hover {
-  background-color: #3C8DFF;
-}
+**Schritt 1:** Hash für Passwort generieren
+- Öffne `index.html` im Browser
+- Drücke F12 für die Konsole
+- Gib ein: `generateHash("deinPasswort")`
+- Kopiere den generierten Hash
 
-/* ------------------------------------
-   Footer
------------------------------------- */
-footer {
-  text-align: center;
-  padding: 40px;
-  color: #666;
-  font-size: 0.9rem;
-}
+**Schritt 2:** Benutzer in index.html einfügen
+```javascript
+const users = {
+    'admin': 'hash_hier',
+    'student': 'hash_hier',
+    'neueruser': 'dein_kopierter_hash',  // Neuer Benutzer
+};
+```
+
+### 4. Geschützte Seiten einrichten
+
+Jede HTML-Seite (außer index.html) benötigt diesen Code direkt nach `<body>`:
+
+```html
+<body>
+<script src="auth-protection.js"></script>
+
+<!-- Dein normaler Seiteninhalt -->
+```
+
+### 5. Navigation einrichten
+
+Füge einen Logout-Button zur Navigation hinzu:
+
+```html
+<nav>
+    <a href="home.html">Home</a>
+    <a href="projekte.html">Projekte</a>
+    <a href="skills.html">Skills</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <button onclick="logout()">🔓 Abmelden</button>
+</nav>
+```
+
+## ⚙️ Konfiguration
+
+### Session-Dauer ändern
+In `auth-protection.js`:
+```javascript
+const TWO_HOURS = 2 * 60 * 60 * 1000;  // 2 Stunden
+```
+Ändern zu:
+```javascript
+const THIRTY_MINUTES = 30 * 60 * 1000;  // 30 Minuten
+const ONE_DAY = 24 * 60 * 60 * 1000;   // 24 Stunden
+```
+
+### Design anpassen
+Die Login-Seite kann in `index.html` im `<style>` Bereich angepasst werden:
+```css
+/* Farbverlauf ändern */
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+/* Zu eigenen Farben */
+background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+```
+
+## 🔒 Sicherheitshinweise
+
+### ⚠️ Wichtig zu wissen:
+
+**Frontend-Login = Basis-Schutz**
+- Dieses System bietet einen Basis-Schutz für Portfolio-Inhalte
+- Passwörter werden gehasht, aber der Code läuft im Browser
+- Technisch versierte Personen könnten den Schutz umgehen
+
+### ✅ Geeignet für:
+- Portfolio-Demos
+- Nicht-sensible Inhalte
+- Geschützte Bereiche für Kunden/Partner
+- Kleine Benutzergruppen
+
+### ❌ Nicht geeignet für:
+- Hochsensible Daten
+- Finanzinformationen
+- Persönliche/medizinische Daten
+- Große Benutzergruppen
+
+### 🛡️ Für höhere Sicherheit:
+Für produktive Anwendungen mit sensiblen Daten wird ein Backend mit:
+- Server-seitiger Authentifizierung
+- Datenbank für Benutzer
+- HTTPS-Verschlüsselung
+- Rate Limiting
+- 2-Faktor-Authentifizierung
+
+empfohlen.
+
+## 🧪 Testen
+
+### Lokal testen:
+```bash
+# Einfacher HTTP-Server mit Python
+python -m http.server 8000
+
+# Oder mit Node.js
+npx http-server
+```
+
+Dann öffne: `http://localhost:8000`
+
+### Auf GitHub Pages:
+1. Pushe alle Dateien zu GitHub
+2. Aktiviere GitHub Pages in den Repository Settings
+3. Wähle Branch: `main` (oder `master`)
+4. Speichern
+5. Deine Seite ist verfügbar unter: `https://dein-username.github.io/dein-repo/`
+
+## 📝 Workflow
+
+```
+Besucher öffnet Website
+    ↓
+Sieht Login-Seite (index.html)
+    ↓
+Gibt Benutzername + Passwort ein
+    ↓
+System hasht Passwort und vergleicht
+    ↓
+Bei Erfolg: Session wird erstellt
+    ↓
+Weiterleitung zu home.html
+    ↓
+Benutzer kann alle Seiten navigieren
+    ↓
+Nach 2 Stunden Inaktivität: Auto-Logout
+    ↓
+Manueller Logout über Button möglich
+```
+
+## 🆘 Troubleshooting
+
+### Problem: "File not found" nach Login
+**Lösung:** Prüfe ob `home.html` existiert und die Weiterleitung korrekt ist.
+
+### Problem: Login funktioniert nicht
+**Lösung:** 
+- Browser-Konsole (F12) öffnen und Fehler prüfen
+- Sicherstellen, dass Passwort-Hash korrekt ist
+- Cache leeren (Strg + F5)
+
+### Problem: Sofortiger Logout
+**Lösung:** Prüfe ob `auth-protection.js` in allen geschützten Seiten eingebunden ist.
+
+### Problem: Alte Startseite wird angezeigt
+**Lösung:** Browser-Cache leeren oder im Inkognito-Modus testen.
+
+## 🎨 Anpassungen
+
+### Login-Seite personalisieren:
+- Ändere den Titel in `index.html`
+- Passe die Farben im CSS an
+- Füge dein Logo hinzu
+- Ändere die Texte nach deinen Wünschen
+
+### Weiterleitungs-Ziel ändern:
+Wenn nach dem Login zu einer anderen Seite weitergeleitet werden soll:
+```javascript
+// In index.html
+window.location.href = 'andere-seite.html';
+```
+
+## 📞 Support
+
+Bei Fragen oder Problemen:
+1. Überprüfe diese README-Datei
+2. Schaue in die Browser-Konsole (F12) für Fehlermeldungen
+3. Prüfe ob alle Dateien korrekt hochgeladen wurden
+4. Teste mit den Standard-Zugangsdaten
+
+## 🔄 Updates
+
+**Version 1.0** (Aktuell)
+- Initiales Login-System
+- SHA-512 Hashing
+- Session Management
+- Multi-User Support
+
+## 📄 Lizenz
+
+Dieses Projekt ist für persönliche und kommerzielle Nutzung frei verfügbar.
+
+## 👨‍💻 Entwicklung
+
+**Technologie-Stack:**
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Web Crypto API (SHA-512)
+- SessionStorage API
+
+**Browser-Kompatibilität:**
+- Chrome/Edge 37+
+- Firefox 34+
+- Safari 11+
+- Opera 24+
+
+## ✅ Checkliste für Live-Deployment
+
+- [ ] Test-Accounts entfernt oder geändert
+- [ ] Eigene Benutzer mit sicheren Passwörtern erstellt
+- [ ] Alle Seiten mit `auth-protection.js` geschützt
+- [ ] Navigation mit Logout-Button versehen
+- [ ] Alle Links funktionieren korrekt
+- [ ] Session-Dauer nach Bedarf angepasst
+- [ ] Design personalisiert
+- [ ] Auf verschiedenen Browsern getestet
+- [ ] Auf Mobile-Geräten getestet
+- [ ] GitHub Pages aktiviert
+
+---
+
+**Erstellt:** 2025  
+**Letzte Aktualisierung:** 2025
+
+Viel Erfolg mit deinem geschützten Portfolio! 🚀
