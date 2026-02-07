@@ -1,3 +1,22 @@
+:root {
+  --bg: #F7F7F7;
+  --text: #222;
+  --card: #FFFFFF;
+  --nav-bg: #FFFFFF;
+  --accent: #0A3D62;
+  --accent-light: #3C8DFF;
+  --shadow: rgba(0,0,0,0.06);
+}
+
+.dark {
+  --bg: #0E1117;
+  --text: #E6E6E6;
+  --card: #161B22;
+  --nav-bg: #161B22;
+  --accent: #3C8DFF;
+  --accent-light: #62A0FF;
+  --shadow: rgba(0,0,0,0.25);
+}
 /* ------------------------------------
    Grundlayout & Typografie
 ------------------------------------ */
