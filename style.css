@@ -124,6 +124,28 @@ nav a:hover {
   opacity: 0.9;
 }
 
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* wichtig, damit der Text nicht zentriert bleibt */
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 220px;              /* kleiner, aber ausdrucksstark */
+    border-radius: 10px;       /* moderner Look */
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtiler Tiefeneffekt */
+}
+
+
 /* ------------------------------------
    Page Wrapper
 ------------------------------------ */
