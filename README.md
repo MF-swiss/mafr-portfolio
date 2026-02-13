@@ -20,6 +20,7 @@ Für Demo-Zwecke sind folgende Test-Accounts verfügbar:
 - **Benutzername:** admin | **Passwort:** demo123
 - **Benutzername:** student | **Passwort:** student
 - **Benutzername:** test | **Passwort:** test003
+- **Benutzername:** SG_Viewer | **Passwort:** SG_9030!
 
 *Hinweis: In der Produktion sollten diese Test-Accounts entfernt werden.*
 
