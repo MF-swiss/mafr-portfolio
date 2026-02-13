@@ -19,6 +19,7 @@ Falls du Zugriff auf dieses Portfolio benötigst, kontaktiere bitte den Portfoli
 Für Demo-Zwecke sind folgende Test-Accounts verfügbar:
 - **Benutzername:** admin | **Passwort:** demo123
 - **Benutzername:** student | **Passwort:** student
+- **Benutzername:** test | **Passwort:** test003
 
 *Hinweis: In der Produktion sollten diese Test-Accounts entfernt werden.*
 
