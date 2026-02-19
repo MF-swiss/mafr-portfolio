@@ -89,6 +89,13 @@ nav a:hover {
   border-bottom: 1px solid var(--border);
   padding: 16px 0;
   background: linear-gradient(135deg, rgba(255,255,255,0.15), #3b3b3b);
+  
+    /* Außen transparent + abgerundet */
+  border-radius: 24px;
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
 }
 
 /* Fade links + rechts */
@@ -104,12 +111,12 @@ nav a:hover {
 }
 
 .marquee-wrapper::before {
-  left: 2;
+  left: 0;
   background: linear-gradient(to right, var(--surface), transparent);
 }
 
 .marquee-wrapper::after {
-  right: 2;
+  right: 0;
   background: linear-gradient(to left, var(--surface), transparent);
 }
 
