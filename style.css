@@ -89,19 +89,19 @@ nav a:hover {
   border-radius: 28px;
 
   /* Edler, dominanter Premium-Verlauf */
-  background: linear-gradient(135deg, #0a0a0a, #2e2e2e, #1a1a1a);
+  background: linear-gradient(
+  135deg,
+  #0a0f14 0%,
+  #1c2a38 25%,
+  #3c3c3c 50%,
+  #1f1f1f 75%,
+  #0f141a 100%
+);
 
   /* Außen-Fade für den „Spotlight“-Look */
-  -webkit-mask-image: radial-gradient(
-    circle,
-    rgba(0,0,0,1) 55%,
-    rgba(0,0,0,0) 100%
-  );
-  mask-image: radial-gradient(
-    circle,
-    rgba(0,0,0,1) 55%,
-    rgba(0,0,0,0) 100%
-  );
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+
 }
 
 /* Fade links + rechts */
@@ -128,8 +128,9 @@ nav a:hover {
 
 /* Text lesbar & edel */
 .marquee-item {
-  color: #e6e6e6;
-  text-shadow: 0 0 6px rgba(255,255,255,0.15);
+  color: #e3edf7;
+  text-shadow: 0 0 8px rgba(140,180,220,0.25);
+
 }
 
 
@@ -148,7 +149,6 @@ nav a:hover {
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-dim);
 }
 
 .marquee-dot {
