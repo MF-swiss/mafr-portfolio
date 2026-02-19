@@ -88,7 +88,7 @@ nav a:hover {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 16px 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15), #3b3b3b);
+  background: linear-gradient(135deg, rgb(72, 72, 72), #3d3d3d);
 
     /* Außen transparent + abgerundet */
   border-radius: 24px;
