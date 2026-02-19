@@ -88,7 +88,7 @@ nav a:hover {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 16px 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15), #1a1a1a);
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), #3b3b3b);
 }
 
 /* Fade links + rechts */
@@ -104,12 +104,12 @@ nav a:hover {
 }
 
 .marquee-wrapper::before {
-  left: 0;
+  left: 2;
   background: linear-gradient(to right, var(--surface), transparent);
 }
 
 .marquee-wrapper::after {
-  right: 0;
+  right: 2;
   background: linear-gradient(to left, var(--surface), transparent);
 }
 
