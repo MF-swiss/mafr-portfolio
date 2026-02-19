@@ -83,19 +83,25 @@ nav a:hover {
 /* Scrolling marquee */
 
 .marquee-wrapper {
-  position: relative; /* wichtig für die Fade-Overlays */
+  position: relative;
   overflow: hidden;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
   padding: 16px 0;
-  background: linear-gradient(135deg, rgb(39, 39, 39), #393939);
+  border-radius: 28px;
 
-    /* Außen transparent + abgerundet */
-  border-radius: 24px;
-  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
-  mask-image: radial-gradient(circle, black 60%, transparent 100%);
-}
+  /* Edler, dominanter Premium-Verlauf */
+  background: linear-gradient(135deg, #0d0d0d, #3b3b3b);
 
+  /* Außen-Fade für den „Spotlight“-Look */
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0,0,0,1) 55%,
+    rgba(0,0,0,0) 100%
+  );
+  mask-image: radial-gradient(
+    circle,
+    rgba(0,0,0,1) 55%,
+    rgba(0,0,0,0) 100%
+  );
 }
 
 /* Fade links + rechts */
@@ -104,7 +110,7 @@ nav a:hover {
   content: "";
   position: absolute;
   top: 0;
-  width: 40px; /* kannst du anpassen */
+  width: 80px;
   height: 100%;
   pointer-events: none;
   z-index: 2;
