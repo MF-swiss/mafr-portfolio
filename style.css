@@ -89,7 +89,7 @@ nav a:hover {
   border-radius: 28px;
 
   /* Edler, dominanter Premium-Verlauf */
-  background: linear-gradient(135deg, #0d0d0d, #3b3b3b);
+  background: linear-gradient(135deg, #0a0a0a, #2e2e2e, #1a1a1a);
 
   /* Außen-Fade für den „Spotlight“-Look */
   -webkit-mask-image: radial-gradient(
@@ -125,6 +125,13 @@ nav a:hover {
   right: 0;
   background: linear-gradient(to left, var(--surface), transparent);
 }
+
+/* Text lesbar & edel */
+.marquee-item {
+  color: #e6e6e6;
+  text-shadow: 0 0 6px rgba(255,255,255,0.15);
+}
+
 
 .marquee-track {
   display: flex;
