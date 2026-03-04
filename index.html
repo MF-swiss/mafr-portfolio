@@ -1,108 +1,131 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .login-container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #555;
-            font-weight: 500;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        .error-message {
-            background: #fee;
-            color: #c33;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: none;
-            text-align: center;
-        }
-
-        .error-message.show {
-            display: block;
-        }
-
-        .info-text {
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio – Marco</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+
+<!-- Marquee -->
+<div class="marquee-wrapper">
+  <div class="marquee-track">
+    <!-- doubled for seamless loop -->
+    <span class="marquee-item"><span class="marquee-dot"></span>Python</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>JavaScript</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Node.js</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>PostgreSQL</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>SQL</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Git & GitHub</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>REST APIs</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>MS Products</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Virtualisierung (VMware & VirtualBox)</span>
+    <!-- zweiter Durchlauf -->
+    <span class="marquee-item"><span class="marquee-dot"></span>Python</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>JavaScript</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Node.js</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>PostgreSQL</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>SQL</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Git & GitHub</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>REST APIs</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>MS Products</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Virtualisierung (VMware & VirtualBox)</span>
+  </div>
+</div>
+
+
+<button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="ueber-mich.html">Über mich</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projekte.html">Projekte</a></li>
+    <li><a href="downloads.html">Downloads</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<!-- Hero-Banner -->
+<header class="hero">
+  <div class="hero-content">
+
+    <div class="hero-text">
+      <h1>Willkommen auf meinem Portfolio</h1>
+      <p>Ich heisse Marco Fritsche, bin angehender Applikationsentwickler an der 
+        <a href="https://www.wiss.ch/de-CH" target="_blank">WISS Schulen für Wirtschaft Informatik Immobilien AG</a> 
+        und motiviert, mein Wissen in einem Praktikum praktisch zu vertiefen und meine Leidenschaft zum Beruf zu machen.
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/Bewerbungsfoto_MarcoFritsche.jpg" alt="Portrait von Marco">
+    </div>
+
+  </div>
+</header>
+
+
+
+<!-- Hauptinhalt -->
+<main class="page">
+
+  <section class="info-accent">
+    <h2>Aktueller Stand der Webseite</h2>
+    <p>Dies ist meine eigene Webseite und dient als Portfolio, welche sich noch im Aufbau befindet und darf gerne bereits erkundet werden.</p>
+  </section>
+
+  
+  <section>
+    <h2>Über mich</h2>
+    <p>
+      Als angehender Applikationsentwickler bringe ich Struktur, Präzision und eine grosse Leidenschaft für moderne Softwareentwicklung in jedes Projekt ein.
+    </p>
+    <a class="btn" href="ueber-mich.html">Mehr über mich</a>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <p>Eine Auswahl meiner wichtigsten technischen und persönlichen Fähigkeiten.</p>
+    <a class="btn" href="skills.html">Zu den Skills</a>
+  </section>
+
+  <section>
+    <h2>Projekte</h2>
+    <p>Hier findest du ausgewählte Projekte, die meine Arbeitsweise und Expertise zeigen.</p>
+    <a class="btn" href="projekte.html">Projekte ansehen</a>
+  </section>
+
+  <section>
+    <h2>Downloads</h2>
+    <p>Lebenslauf, Zeugnisse und weitere Unterlagen stehen hier bereit.</p>
+    <a class="btn" href="downloads.html">Downloads öffnen</a>
+  </section>
+
+  <section>
+    <h2>Kontakt</h2>
+    <p>Du möchtest mit mir in Kontakt treten? Hier findest du alle Informationen.</p>
+    <a class="btn" href="kontakt.html">Kontakt aufnehmen</a>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Marco Fritsche – Persönliches Portfolio
+</footer>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    toggle.textContent = document.body.classList.contains('dark')
+      ? "☀️ Light Mode"
+      : "🌙 Dark Mode";
+  });
+</script>
+
+</body>
 </html>
