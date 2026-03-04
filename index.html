@@ -1,144 +1,213 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio – Marco</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .info-text {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="login-container">
+        <h1>🔐 Portfolio Login</h1>
+        
+        <div id="errorMessage" class="error-message">
+            Falscher Benutzername oder Passwort
+        </div>
 
-<!-- Marquee -->
-<div class="marquee-wrapper">
-  <div class="marquee-track">
-    <!-- doubled for seamless loop -->
-    <span class="marquee-item"><span class="marquee-dot"></span>Python</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>JavaScript</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Node.js</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>PostgreSQL</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>SQL</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Git & GitHub</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>REST APIs</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>MS Products</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Virtualisierung (VMware & VirtualBox)</span>
-    <!-- zweiter Durchlauf -->
-    <span class="marquee-item"><span class="marquee-dot"></span>Python</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>JavaScript</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Node.js</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>PostgreSQL</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>SQL</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Git & GitHub</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>REST APIs</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>MS Products</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>Virtualisierung (VMware & VirtualBox)</span>
-  </div>
-</div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Benutzername</label>
+                <input type="text" id="username" name="username" required autocomplete="username">
+            </div>
 
+            <div class="form-group">
+                <label for="password">Passwort</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password">
+            </div>
 
-<button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+            <button type="submit">Anmelden</button>
+        </form>
 
-<!-- Navigation -->
-<nav>
-  <ul>
-    <li><a href="index.html">Start</a></li>
-    <li><a href="ueber-mich.html">Über mich</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="projekte.html">Projekte</a></li>
-    <li><a href="downloads.html">Downloads</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>
-</nav>
-
-<!-- Hero-Banner -->
-<header class="hero">
-  <div class="hero-content">
-
-    <div class="hero-text">
-      <h1>Willkommen auf meinem Portfolio</h1>
-      <p>Ich heisse Marco Fritsche, bin angehender Applikationsentwickler an der 
-        <a href="https://www.wiss.ch/de-CH" target="_blank">WISS Schulen für Wirtschaft Informatik Immobilien AG</a> 
-        und motiviert, mein Wissen in einem Praktikum praktisch zu vertiefen und meine Leidenschaft zum Beruf zu machen.
-      </p>
+        <p class="info-text">Geschützter Bereich</p>
     </div>
 
-    <div class="hero-image">
-      <img src="images/Bewerbungsfoto_MarcoFritsche.jpg" alt="Portrait von Marco">
-    </div>
+    <script>
+        // HIER DEINE BENUTZER KONFIGURIEREN
+        // Format: { 'benutzername': 'passwort_hash' }
+        // Die Hashes kannst du mit der generateHash() Funktion in der Konsole erstellen
+        const users = {
+            // Benutzername "admin", Passwort "demo123"
+            'admin': 'ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413',
+            
+            // Benutzername "student", Passwort "student"
+            'student': '32ade5e7c36fa329ea39dbc352743db40da5aa7460ec55f95b999d6371ad20170094d88d9296643f192e9d5433b8d6d817d6777632e556e96e58f741dc5b3550',
 
-  </div>
-</header>
+            // Benutzername "student", Passwort "student"
+            //'test': 'f0ed6cd587f35e1a0a131686d65fe473e286d703caaf4b4a2519bb3176770fb2e2e834728a9575e4a166d2dd71f6bb5b34f7b1d7513439c7fc0d5361c4a4ed65',
+            
+            // Benutzername "student", Passwort "student"
+            'SG_Viewer': 'c8ebd6a7e7796d00f60b663a2fba577f042e0873306e7361443505b8e5c01a3e25f757a01d776e561b1b7167e0a4c34837938471ca84d6f4a85c21016a26fe5a',
 
+            
+            // Füge hier weitere Benutzer hinzu:
+            // 'max': 'hash_hier',
+            // 'anna': 'hash_hier'
+        };
 
+        // SHA-512 Hash-Funktion
+        async function sha512(str) {
+            const buf = await crypto.subtle.digest("SHA-512", new TextEncoder().encode(str));
+            return Array.prototype.map.call(new Uint8Array(buf), x=>(('00'+x.toString(16)).slice(-2))).join('');
+        }
 
-<!-- Hauptinhalt -->
-<main class="page">
+        // Hilfsfunktion zum Generieren von Hashes (in Browser-Konsole nutzen)
+        async function generateHash(password) {
+            const hash = await sha512(password);
+            console.log('Hash für Passwort "' + password + '":');
+            console.log(hash);
+            return hash;
+        }
 
-  <section class="info-accent">
-    <h2>Aktueller Stand der Webseite</h2>
-    <p>Dies ist meine eigene Webseite und dient als Portfolio, welche sich noch im Aufbau befindet und darf gerne bereits erkundet werden.</p>
-  </section>
+        // Login-Formular Handler
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Passwort hashen
+            const passwordHash = await sha512(password);
+            
+            // Prüfen ob Benutzer existiert und Passwort stimmt
+            if (users[username] && users[username] === passwordHash) {
+                // Login erfolgreich
+                sessionStorage.setItem('loggedIn', 'true');
+                sessionStorage.setItem('username', username);
+                sessionStorage.setItem('loginTime', new Date().getTime());
+                
+                // Weiterleitung zur Haupt-Portfolio-Seite
+                window.location.href = 'home.html';
+            } else {
+                // Login fehlgeschlagen
+                errorMessage.classList.add('show');
+                document.getElementById('password').value = '';
+                
+                setTimeout(() => {
+                    errorMessage.classList.remove('show');
+                }, 3000);
+            }
+        });
 
-  
-  <section>
-    <h2>Über mich</h2>
-    <p>
-      Als angehender Applikationsentwickler bringe ich Struktur, Präzision und eine grosse Leidenschaft für moderne Softwareentwicklung in jedes Projekt ein.
-    </p>
-    <a class="btn" href="ueber-mich.html">Mehr über mich</a>
-  </section>
+        // Prüfen ob bereits eingeloggt
+        if (sessionStorage.getItem('loggedIn') === 'true') {
+            window.location.href = 'home.html';
+        }
 
-  <section>
-    <h2>Skills</h2>
-    <p>Eine Auswahl meiner wichtigsten technischen und persönlichen Fähigkeiten.</p>
-    <a class="btn" href="skills.html">Zu den Skills</a>
-  </section>
-
-  <section>
-    <h2>Projekte</h2>
-    <p>Hier findest du ausgewählte Projekte, die meine Arbeitsweise und Expertise zeigen.</p>
-    <a class="btn" href="projekte.html">Projekte ansehen</a>
-  </section>
-
-  <section>
-    <h2>Downloads</h2>
-    <p>Lebenslauf, Zeugnisse und weitere Unterlagen stehen hier bereit.</p>
-    <a class="btn" href="downloads.html">Downloads öffnen</a>
-  </section>
-
-  <section>
-    <h2>Kontakt</h2>
-    <p>Du möchtest mit mir in Kontakt treten? Hier findest du alle Informationen.</p>
-    <a class="btn" href="kontakt.html">Kontakt aufnehmen</a>
-  </section>
-
-</main>
-
-<footer>
-  © 2026 Marco Fritsche – Persönliches Portfolio
-</footer>
-
-<script>
-  // Gespeichertes Theme beim Laden der Seite wiederherstellen
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark');
-  }
-
-  // Toggle-Button-Funktion
-  const toggle = document.getElementById('theme-toggle');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    const isDark = document.body.classList.contains('dark');
-    
-    // Status in localStorage speichern
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    
-    // Button-Text aktualisieren
-    toggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-  });
-  
-  // Button-Text initial anpassen
-  toggle.textContent = document.body.classList.contains('dark') ? '☀️ Light Mode' : '🌙 Dark Mode';
-</script>
+        // Zum Testen in der Browser-Konsole verfügbar machen
+        window.generateHash = generateHash;
+        
+        // Info in Konsole ausgeben
+        console.log('💡 Tipp: Nutze generateHash("dein_passwort") in der Konsole um einen Hash zu erstellen');
+    </script>
 </body>
 </html>

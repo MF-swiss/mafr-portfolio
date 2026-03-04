@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über mich – Marco</title>
+  <title>Portfolio – Marco</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,6 @@
 <!-- LOGIN-SCHUTZ START -->
 <script src="auth-protection.js"></script>
 <!-- LOGIN-SCHUTZ ENDE -->
-
 
 <!-- Marquee -->
 <div class="marquee-wrapper">
@@ -39,9 +38,10 @@
   </div>
 </div>
 
+
 <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
 
-
+<!-- Navigation -->
 <nav>
   <ul>
     <li><a href="home.html">Start</a></li>
@@ -54,19 +54,66 @@
   </ul>
 </nav>
 
+<!-- Hero-Banner -->
+<header class="hero">
+  <div class="hero-content">
+
+    <div class="hero-text">
+      <h1>Willkommen auf meinem Portfolio</h1>
+      <p>Ich heisse Marco Fritsche, bin angehender Applikationsentwickler an der 
+        <a href="https://www.wiss.ch/de-CH" target="_blank">WISS Schulen für Wirtschaft Informatik Immobilien AG</a> 
+        und motiviert, mein Wissen in einem Praktikum praktisch zu vertiefen und meine Leidenschaft zum Beruf zu machen.
+      </p>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/Bewerbungsfoto_MarcoFritsche.jpg" alt="Portrait von Marco">
+    </div>
+
+  </div>
+</header>
+
+
+
+<!-- Hauptinhalt -->
 <main class="page">
 
+  <section class="info-accent">
+    <h2>Aktueller Stand der Webseite</h2>
+    <p>Dies ist meine eigene Webseite und dient als Portfolio, welche sich noch im Aufbau befindet und darf gerne bereits erkundet werden.</p>
+  </section>
+
+  
   <section>
-    <h1>Über mich</h1>
+    <h2>Über mich</h2>
     <p>
-      Ich bin Marco Fritsche, ein engagierter Informatiker mit einer Leidenschaft für klare Strukturen, effiziente Abläufe und nachhaltige Verbesserungen in technischen Systemen. Meine besondere Stärke liegt darin, komplexe Prozesse zu durchdringen, logisch aufzubereiten und so weiterzuentwickeln, dass sie langfristig stabil, nachvollziehbar und wartungsfreundlich bleiben.
+      Als angehender Applikationsentwickler bringe ich Struktur, Präzision und eine grosse Leidenschaft für moderne Softwareentwicklung in jedes Projekt ein.
     </p>
-    <p>
-      Ich arbeite gerne dort, wo viele Schritte ineinandergreifen und wo präzise Abstimmung entscheidend ist. Ob es um die Optimierung bestehender Abläufe, die Einführung verlässlicher Entwicklungs‑ und Deployment‑Prozesse oder die Vereinfachung technischer Workflows geht – ich denke in Systemen, Abhängigkeiten und Architekturmustern.
-    </p>
-    <p>
-      Was mich antreibt, ist die Kombination aus analytischem Denken und praktischem Nutzen: Ich möchte Lösungen schaffen, die Teams entlasten, Fehlerquellen reduzieren und den Alltag spürbar effizienter machen. Dabei lege ich grossen Wert auf Transparenz, saubere Strukturen und eine Arbeitsweise, die auch in Zukunft problemlos erweitert werden kann.
-    </p>
+    <a class="btn" href="ueber-mich.html">Mehr über mich</a>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <p>Eine Auswahl meiner wichtigsten technischen und persönlichen Fähigkeiten.</p>
+    <a class="btn" href="skills.html">Zu den Skills</a>
+  </section>
+
+  <section>
+    <h2>Projekte</h2>
+    <p>Hier findest du ausgewählte Projekte, die meine Arbeitsweise und Expertise zeigen.</p>
+    <a class="btn" href="projekte.html">Projekte ansehen</a>
+  </section>
+
+  <section>
+    <h2>Downloads</h2>
+    <p>Lebenslauf, Zeugnisse und weitere Unterlagen stehen hier bereit.</p>
+    <a class="btn" href="downloads.html">Downloads öffnen</a>
+  </section>
+
+  <section>
+    <h2>Kontakt</h2>
+    <p>Du möchtest mit mir in Kontakt treten? Hier findest du alle Informationen.</p>
+    <a class="btn" href="kontakt.html">Kontakt aufnehmen</a>
   </section>
 
 </main>
@@ -85,6 +132,5 @@
   });
 </script>
 
- 
 </body>
 </html>
